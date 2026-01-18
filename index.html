@@ -1,126 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me - SpringTrap</title>
+<style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Orbitron', sans-serif; }
 
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-            line-height: 1.6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
-        .container {
-            background-color: #fff;
-            max-width: 800px;
-            width: 90%;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            padding: 40px;
-            text-align: center;
-        }
+    body {
+        background-color: #0a0a0a;
+        color: #e0e0e0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow: hidden;
+    }
 
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 4px solid #4CAF50;
-        }
+    .container {
+        background: linear-gradient(145deg, #1a1a1a, #111);
+        max-width: 800px;
+        width: 90%;
+        border-radius: 20px;
+        padding: 40px;
+        text-align: center;
+        box-shadow: 0 0 30px rgba(128, 0, 255, 0.7);
+        border: 2px solid #8000ff;
+        animation: glow 3s infinite alternate;
+    }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            color: #222;
-        }
+    @keyframes glow {
+        0% { box-shadow: 0 0 20px #8000ff; }
+        100% { box-shadow: 0 0 40px #d18fff; }
+    }
 
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            color: #555;
-        }
+    .profile-img {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #d18fff;
+        margin-bottom: 20px;
+    }
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 30px;
-        }
+    h1 {
+        font-size: 2.8rem;
+        color: #d18fff;
+        margin-bottom: 10px;
+    }
 
-        .skill {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            transition: transform 0.2s;
-        }
+    p {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        color: #cfcfcf;
+    }
 
-        .skill:hover {
-            transform: scale(1.1);
-        }
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 30px;
+    }
 
-        .contact a {
-            text-decoration: none;
-            color: #4CAF50;
-            font-weight: bold;
-            margin: 0 10px;
-            transition: color 0.2s;
-        }
+    .skill {
+        background-color: #8000ff;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-weight: bold;
+        font-size: 0.95rem;
+        transition: transform 0.2s, background-color 0.2s;
+        cursor: default;
+    }
 
-        .contact a:hover {
-            color: #333;
-        }
+    .skill:hover {
+        transform: scale(1.1);
+        background-color: #d18fff;
+    }
 
-        @media (max-width: 500px) {
-            h1 {
-                font-size: 2rem;
-            }
+    .contact a {
+        text-decoration: none;
+        color: #d18fff;
+        font-weight: bold;
+        margin: 0 12px;
+        transition: color 0.2s;
+    }
 
-            p {
-                font-size: 1rem;
-            }
+    .contact a:hover {
+        color: #fff;
+    }
 
-            .skills {
-                flex-direction: column;
-            }
-        }
-    </style>
+    .timezone {
+        margin-top: 15px;
+        font-size: 1rem;
+        color: #b0a0ff;
+    }
+
+    @media (max-width: 500px) {
+        h1 { font-size: 2rem; }
+        p { font-size: 1rem; }
+        .skills { flex-direction: column; }
+    }
+</style>
 </head>
 <body>
-    <div class="container">
-        <img src="profile.jpg" alt="Profile Picture" class="profile-img">
-        <h1>John Doe</h1>
-        <p>I specialize in creating custom scripts and tools for Roblox executors. I code for others, build script UIs, and develop features to enhance gameplay experiences for players. I focus on efficiency, reliability, and clean design in every project.</p>
-        
-        <div class="skills">
-            <div class="skill">Luau</div>
-            <div class="skill">Executor Scripts</div>
-            <div class="skill">UI Development</div>
-            <div class="skill">Automation</div>
-            <div class="skill">Game Enhancement</div>
-        </div>
 
-        <div class="contact">
-            <a href="mailto:john@example.com">Email</a> |
-            <a href="https://github.com/johndoe" target="_blank">GitHub</a> |
-            <a href="https://linkedin.com/in/johndoe" target="_blank">LinkedIn</a>
-        </div>
+<div class="container">
+    <img src="profile.jpg" alt="SpringTrap Profile" class="profile-img">
+    <h1>SpringTrap</h1>
+    <p>Hello! I code for others, creating scripts and tools for Roblox executors. I focus on clean, efficient, and futuristic designs that enhance gameplay experiences. Always pushing the limits of Luau and executor coding!</p>
+    
+    <div class="skills">
+        <div class="skill">Luau</div>
+        <div class="skill">Executor Scripts</div>
+        <div class="skill">UI Design</div>
+        <div class="skill">Automation</div>
+        <div class="skill">Game Enhancement</div>
     </div>
+
+    <div class="contact">
+        <a href="mailto:springtrap@example.com">Email</a> |
+        <a href="https://github.com/springtrap" target="_blank">GitHub</a> |
+        <a href="https://linkedin.com/in/springtrap" target="_blank">LinkedIn</a>
+    </div>
+
+    <div class="timezone" id="timezone"></div>
+</div>
+
+<script>
+    function updateTime() {
+        const options = { hour: 'numeric', minute: 'numeric', hour12: true, timeZone: 'America/New_York' };
+        const now = new Date().toLocaleString('en-US', options);
+        document.getElementById('timezone').textContent = `Current Time (New York): ${now} | Locations: Morocco & USA`;
+    }
+    updateTime();
+    setInterval(updateTime, 60000); // updates every minute
+</script>
+
 </body>
 </html>
